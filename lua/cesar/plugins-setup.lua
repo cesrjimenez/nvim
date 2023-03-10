@@ -114,7 +114,7 @@ return packer.startup(function(use)
 	-- trouble
 	use({ "folke/trouble.nvim", requires = "nvim-tree/nvim-web-devicons" })
 
-	-- noice uis
+	-- noice ui
 	use({ "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } })
 
 	-- leap
@@ -133,6 +133,15 @@ return packer.startup(function(use)
 	-- go
 	use("ray-x/go.nvim")
 	use("ray-x/guihua.lua")
+
+	-- harpoon
+	use("ThePrimeagen/harpoon")
+
+	-- fidget
+	use("j-hui/fidget.nvim")
+
+	-- structure
+	use({ "crusj/structrue-go.nvim", branch = "main" })
 
 	if packer_bootstrap then
 		require("packer").sync()
