@@ -149,6 +149,10 @@ return packer.startup(function(use)
 	-- lazygit
 	use("kdheepak/lazygit.nvim")
 
+	-- vim-dadbod
+	use("tpope/vim-dadbod")
+	use("kristijanhusak/vim-dadbod-ui")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

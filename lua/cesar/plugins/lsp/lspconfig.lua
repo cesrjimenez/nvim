@@ -148,7 +148,7 @@ lspconfig["gopls"].setup({
 	},
 })
 
-vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("info")
 
 -- configure lua server (with special settings)
 lspconfig["lua_ls"].setup({

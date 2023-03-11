@@ -3,6 +3,19 @@ if not status then
 	return
 end
 
+local parser_status, treesitter_parser = pcall(require, "nvim-treesitter.parsers")
+if not parser_status then
+	return
+end
+
+treesitter_parser.get_parser_configs().markdown = {
+	install_info = {
+		url = "https://github.com/MDeiml/tree-sitter-markdown",
+		files = { "src/parser.c", "src/scanner.cc" },
+	},
+	filetype = "markdown",
+}
+
 treesitter.setup({
 	highlight = {
 		enable = true,
@@ -23,7 +36,9 @@ treesitter.setup({
 		"javascript",
 		"json",
 		"lua",
+		"sql",
 		"markdown",
+		"markdown_inline",
 		"python",
 		"regex",
 		"tsx",
