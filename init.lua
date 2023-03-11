@@ -22,6 +22,7 @@ require("cesar.plugins.go")
 require("cesar.plugins.harpoon")
 require("cesar.plugins.fidget")
 require("cesar.plugins.structure-go")
+require("cesar.plugins.indent-blankline")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")

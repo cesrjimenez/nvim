@@ -67,9 +67,9 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 
 	-- snippets
-	use("L3MON4D3/LuaSnip")
-	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
+	-- use("L3MON4D3/LuaSnip")
+	-- use("saadparwaiz1/cmp_luasnip")
+	-- use("rafamadriz/friendly-snippets")
 
 	-- managing & installing lsp servers
 	use("williamboman/mason.nvim")
@@ -142,6 +142,12 @@ return packer.startup(function(use)
 
 	-- structure
 	use({ "crusj/structrue-go.nvim", branch = "main" })
+
+	-- indent dots
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- lazygit
+	use("kdheepak/lazygit.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()
