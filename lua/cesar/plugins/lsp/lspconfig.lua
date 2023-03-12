@@ -117,6 +117,22 @@ lspconfig["sqlls"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig.sqls.setup({
+	on_attach = function(client, bufnr)
+		require("sqls").on_attach(client, bufnr)
+	end,
+	settings = {
+		sqls = {
+			connections = {
+				{
+					driver = "postgresql",
+					dataSourceName = "postgres://sourcegraph@localhost:5432/sourcegraph?sslmode=disable",
+				},
+			},
+		},
+	},
+})
+
 -- configure tailwindcss server
 lspconfig["tailwindcss"].setup({
 	capabilities = capabilities,

@@ -264,6 +264,16 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  psql = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/psql",
+    url = "https://github.com/mzarnitsa/psql"
+  },
+  ["sqls.nvim"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/sqls.nvim",
+    url = "https://github.com/nanotee/sqls.nvim"
+  },
   ["structrue-go.nvim"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/structrue-go.nvim",

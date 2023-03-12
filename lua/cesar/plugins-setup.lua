@@ -153,6 +153,10 @@ return packer.startup(function(use)
 	use("tpope/vim-dadbod")
 	use("kristijanhusak/vim-dadbod-ui")
 
+	-- postgres
+	use("mzarnitsa/psql")
+	use("nanotee/sqls.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
