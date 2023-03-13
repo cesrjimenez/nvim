@@ -8,7 +8,7 @@ if not dapui_ok then
 	return
 end
 
-dap.set_log_level("INFO")
+-- dap.set_log_level("INFO")
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()

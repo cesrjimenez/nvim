@@ -24,6 +24,8 @@ require("cesar.plugins.fidget")
 require("cesar.plugins.structure-go")
 require("cesar.plugins.indent-blankline")
 require("cesar.plugins.psql")
+require("cesar.plugins.command-center")
+require("cesar.plugins.dressing")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")

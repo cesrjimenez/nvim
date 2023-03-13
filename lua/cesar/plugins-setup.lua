@@ -60,16 +60,17 @@ return packer.startup(function(use)
 		"nvim-telescope/telescope-file-browser.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
+	use({ "nvim-telescope/telescope-ui-select.nvim" })
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
+	use("saadparwaiz1/cmp_luasnip")
 
 	-- snippets
-	-- use("L3MON4D3/LuaSnip")
-	-- use("saadparwaiz1/cmp_luasnip")
-	-- use("rafamadriz/friendly-snippets")
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
 
 	-- managing & installing lsp servers
 	use("williamboman/mason.nvim")
@@ -85,7 +86,9 @@ return packer.startup(function(use)
 			{ "nvim-tree/nvim-web-devicons" },
 			{ "nvim-treesitter/nvim-treesitter" },
 		},
-	}) -- enhanced lsp uis
+	})
+
+	-- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim")
 	use("onsails/lspkind.nvim")
 
@@ -156,6 +159,29 @@ return packer.startup(function(use)
 	-- postgres
 	use("mzarnitsa/psql")
 	use("nanotee/sqls.nvim")
+
+	-- command center
+	use({ "FeiyouG/command_center.nvim", requires = { "nvim-telescope/telescope.nvim" } })
+
+	-- dressing
+	use({ "stevearc/dressing.nvim" })
+
+	-- legendary
+	use({ "mrjones2014/legendary.nvim", requires = "kkharji/sqlite.lua" })
+
+	-- which-key
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 850
+			require("which-key").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

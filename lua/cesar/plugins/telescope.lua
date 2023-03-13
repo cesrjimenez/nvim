@@ -26,7 +26,7 @@ telescope.setup({
 -- open file_browser with the path of the current buffer
 vim.api.nvim_set_keymap(
 	"n",
-	"<space>fk",
+	"<space>fb",
 	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
 	{ noremap = true }
 )
@@ -36,3 +36,4 @@ vim.api.nvim_set_keymap(
 telescope.load_extension("file_browser")
 telescope.load_extension("fzf")
 telescope.load_extension("dap")
+telescope.load_extension("ui-select")
