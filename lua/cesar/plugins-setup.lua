@@ -183,6 +183,15 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- hierarchy-tree-go
+	use({
+		"crusj/hierarchy-tree-go.nvim",
+		requires = "neovim/nvim-lspconfig",
+	})
+
+	-- git blame
+	use("f-person/git-blame.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

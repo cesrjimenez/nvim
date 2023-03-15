@@ -297,4 +297,67 @@ command_center.add({
 	},
 })
 
+-- Hierarchy Tree Go
+command_center.add({
+	{
+		desc = "Hierarchy Tree: Call incoming",
+		cmd = "<leader>fi",
+		keys = { "n", ":lua require'hierarchy-tree-go'.incoming()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Call outgoing",
+		cmd = "<leader>fo",
+		keys = { "n", ":lua require'hierarchy-tree-go'.outgoing()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Open hierarchy tree",
+		cmd = "<leader>ho",
+		keys = { "n", ":lua require'hierarchy-tree-go'.open()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Close hierarchy tree",
+		cmd = "<leader>hc",
+		keys = { "n", ":lua require'hierarchy-tree-go'.close()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Focus hierarchy tree",
+		cmd = "<leader>fu",
+		keys = { "n", ":lua require'hierarchy-tree-go'.focus()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Expand hierarchy tree",
+		cmd = "o",
+		keys = { "n", ":lua require'hierarchy-tree-go'.expand()", silent_noremap },
+	},
+	{
+		desc = "Hierarchy Tree: Jump to selection",
+		cmd = "<CR>",
+		keys = { "n", ":lua require'hierarchy-tree-go'.jump()", silent_noremap },
+	},
+})
+
+-- Git Blame
+command_center.add({
+	{
+		desc = "Git Blame: Toggle git blame",
+		cmd = ":GitBlameToggle<CR>",
+	},
+	{
+		desc = "Git Blame: Enable git blame",
+		cmd = ":GitBlameEnable<CR>",
+	},
+	{
+		desc = "Git Blame: Disable git blame",
+		cmd = ":GitBlameDisable<CR>",
+	},
+	{
+		desc = "Git Blame: Copy SHA hash",
+		cmd = ":GitBlameCopySHA<CR>",
+	},
+	{
+		desc = "Git Blame: Copy commit URL",
+		cmd = ":GitBlameCopyCommitURL<CR>",
+	},
+})
+
 telescope.load_extension("command_center")

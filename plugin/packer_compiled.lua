@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["git-blame.nvim"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
+    url = "https://github.com/f-person/git-blame.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -153,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
+  },
+  ["hierarchy-tree-go.nvim"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/hierarchy-tree-go.nvim",
+    url = "https://github.com/crusj/hierarchy-tree-go.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,

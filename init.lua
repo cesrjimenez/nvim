@@ -26,6 +26,7 @@ require("cesar.plugins.indent-blankline")
 require("cesar.plugins.psql")
 require("cesar.plugins.command-center")
 require("cesar.plugins.dressing")
+require("cesar.plugins.hierarchy-tree")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")
