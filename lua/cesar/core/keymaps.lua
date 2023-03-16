@@ -44,3 +44,6 @@ keymap.set("n", "<leader>=d", "<cmd>TroubleToggle document_diagnostics<cr>", { s
 keymap.set("n", "<leader>=l", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>=q", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+
+-- buffer close
+keymap.set("n", "<leader>q", ":BDelete this<CR>")
