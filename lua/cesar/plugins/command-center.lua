@@ -42,11 +42,6 @@ command_center.add({
 -- Window Mappings
 command_center.add({
 	{
-		desc = "Window: Split window vertically",
-		cmd = "<leader>sv",
-		keys = { "n", "<C-w>v", noremap },
-	},
-	{
 		desc = "Window: Split horizontal",
 		cmd = "<leader>sh",
 		keys = { "n", "<C-w>s", noremap },
@@ -81,7 +76,6 @@ command_center.add({
 		keys = { "n", ":tabnew<CR>", noremap },
 	},
 	{
-
 		desc = "Tab: Close current tab",
 		cmd = "<leader>tx",
 		keys = { "n", ":tabclose<CR>", noremap },
@@ -95,11 +89,6 @@ command_center.add({
 		desc = "Tab: Previous tab",
 		cmd = "<leader>tp",
 		keys = { "n", ":tabp<CR>", noremap },
-	},
-	{
-		desc = "Buffer: Close current buffer",
-		cmd = "<leader>w",
-		keys = { "n", ":tabclose<CR>", noremap },
 	},
 })
 
@@ -357,6 +346,90 @@ command_center.add({
 	{
 		desc = "Git Blame: Copy commit URL",
 		cmd = ":GitBlameCopyCommitURL<CR>",
+	},
+})
+
+-- LSP
+command_center.add({
+	{
+		desc = "LSP: Show definition & references",
+		cmd = "<CMD>Lspsaga lsp_finder<CR>",
+		keys = { "n", "gr", silent_noremap },
+	},
+	{
+		desc = "LSP: Go to declaration",
+		cmd = "<CMD>lua vim.lsp.buf.declaration()<CR>",
+		keys = { "n", "gD", silent_noremap },
+	},
+	{
+		desc = "LSP: Peek definition",
+		cmd = "<CMD>Lspsaga peek_definition<CR>",
+		keys = { "n", "gd", silent_noremap },
+	},
+	{
+		desc = "LSP: Go to implementation",
+		cmd = "<CMD>lua vim.lsp.buf.implementation()<CR>",
+		keys = { "n", "gi", silent_noremap },
+	},
+	{
+		desc = "LSP: Show hover",
+		cmd = "<CMD>lua vim.lsp.buf.hover()<CR>",
+		keys = { "n", "gh", silent_noremap },
+	},
+	{
+		desc = "LSP: See Code Actions",
+		cmd = "<CMD>Lspsaga code_action<CR>",
+		keys = { "n", "<leader>ca", silent_noremap },
+	},
+	{
+		desc = "LSP: Rename",
+		cmd = "<CMD>Lspsaga rename<CR>",
+		keys = { "n", "<leader>rn", silent_noremap },
+	},
+	{
+		desc = "LSP: Show line diagnostics",
+		cmd = "<CMD>Lspsaga show_line_diagnostics<CR>",
+		keys = { "n", "<leader>D", silent_noremap },
+	},
+	{
+		desc = "LSP: Show cursor diagnostics",
+		cmd = "<CMD>Lspsaga show_cursor_diagnostics<CR>",
+		keys = { "n", "<leader>d", silent_noremap },
+	},
+	{
+		desc = "LSP: Jump to next diagnostic",
+		cmd = "<CMD>Lspsaga diagnostic_jump_next<CR>",
+		keys = { "n", "]d", silent_noremap },
+	},
+	{
+		desc = "LSP: Jump to previous diagnostic",
+		cmd = "<CMD>Lspsaga diagnostic_jump_prev<CR>",
+		keys = { "n", "[d", silent_noremap },
+	},
+	{
+		desc = "LSP: Show hover documentation",
+		cmd = "<CMD>Lspsaga hover_doc<CR>",
+		keys = { "n", "<leader>hd", silent_noremap },
+	},
+	{
+		desc = "LSP: See outline on right hand side",
+		cmd = "<CMD>LSoutlineToggle<CR>",
+		keys = { "n", "<leader>o", silent_noremap },
+	},
+	{
+		desc = "LSP: [Typescript] Rename file",
+		cmd = "<CMD>TypescriptRenameFile<CR>",
+		keys = { "n", "<leader>rf", silent_noremap },
+	},
+	{
+		desc = "LSP: [Typescript] Organize imports",
+		cmd = "<CMD>TypescriptOrganizeImports<CR>",
+		keys = { "n", "<leader>oi", silent_noremap },
+	},
+	{
+		desc = "LSP: [Typescript] Remove unused variables",
+		cmd = "<CMD>TypescriptRemoveUnused<CR>",
+		keys = { "n", "<leader>ru", silent_noremap },
 	},
 })
 

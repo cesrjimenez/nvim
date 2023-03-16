@@ -3,7 +3,6 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- general keymaps
-
 keymap.set("i", "jk", "<ESC>") -- jk to ESC
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search with space+nh
@@ -23,9 +22,7 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
-keymap.set("n", "<leader>w", ":bd<CR>") -- close current buffer
-
--- plugin keymaps
+-- plugin keymaps --
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
@@ -41,8 +38,8 @@ keymap.set("n", "<leader>fk", "<cmd>Telescope buffers<cr>") -- list open buffers
 keymap.set("n", "<leader>fh", "<cmd>Telescope current_buffer_fuzzy_find<cr>") -- list available help tags
 
 -- trouble
-keymap.set("n", "<leader>=", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
-keymap.set("n", "<leader>=w", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>=", "<cmd>troubletoggle<cr>", { silent = true, noremap = true })
+keymap.set("n", "<leader>=w", "<cmd>troubletoggle workspace_diagnostics<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>=d", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>=l", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
 keymap.set("n", "<leader>=q", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })

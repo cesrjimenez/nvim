@@ -192,6 +192,9 @@ return packer.startup(function(use)
 	-- git blame
 	use("f-person/git-blame.nvim")
 
+	-- close buffer
+	use("kazhala/close-buffers.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

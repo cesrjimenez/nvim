@@ -1,5 +1,8 @@
 local opt = vim.opt -- for conciseness
 
+-- hidden
+opt.hidden = true
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true
