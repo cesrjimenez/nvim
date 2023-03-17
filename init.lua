@@ -28,6 +28,9 @@ require("cesar.plugins.command-center")
 require("cesar.plugins.dressing")
 require("cesar.plugins.hierarchy-tree")
 require("cesar.plugins.git-blame")
+require("cesar.plugins.neotest")
+require("cesar.plugins.trailblazer")
+require("cesar.plugins.chatgpt")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")

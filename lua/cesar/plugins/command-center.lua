@@ -438,4 +438,62 @@ command_center.add({
 	},
 })
 
+-- NeoTest
+command_center.add({
+	{
+		desc = "NeoTest: Run nearest test",
+		cmd = "<CMD>lua require('neotest').run.run()<CR>",
+		keys = { "n", "<leader>T", silent_noremap },
+	},
+	{
+		desc = "NeoTest: Run all tests in file",
+		cmd = "<CMD>lua require('neotest').run.run(vim.fn.expand('%'))<CR>",
+		keys = { "n", "<leader>Tf", silent_noremap },
+	},
+	{
+		desc = "NeoTest: Toggle the output panel",
+		cmd = "<CMD>lua require('neotest').output_panel.toggle()<CR>",
+		keys = { "n", "<leader>To", silent_noremap },
+	},
+	{
+		desc = "NeoTest: Open test output",
+		cmd = "<CMD>lua require('neotest').output.open({ enter = true })<CR>",
+		keys = { "n", "<leader>Te", silent_noremap },
+	},
+})
+
+-- Trailblazer
+command_center.add({
+	{
+		desc = "Trailblazer: Add marker  ",
+		cmd = "<CMD>TrailBlazerNewTrailMark<CR>",
+		keys = { "n", "<leader>ma", silent_noremap },
+	},
+	{
+		desc = "Trailblazer: Trackback go to Basecamp  (consume)",
+		cmd = "<CMD>TrailBlazerTrackBack<CR>",
+		keys = { "n", "<leader>mb", silent_noremap },
+	},
+	{
+		desc = "Trailblazer: Track back marker (peek)  ",
+		cmd = "<CMD>TrailBlazerPeekMovePreviousUp<CR>",
+		keys = { "n", "<leader>mM", silent_noremap },
+	},
+	{
+		desc = "Trailblazer: Track forward marker (peek)  ",
+		cmd = "<CMD>TrailBlazerPeekMoveNextDown<CR>",
+		keys = { "n", "<leader>mm", silent_noremap },
+	},
+	{
+		desc = "Trailblazer: Jump to closest marker",
+		cmd = "<CMD>TrailBlazerMoveToNearest<CR>",
+		keys = { "n", "<leader>mc", silent_noremap },
+	},
+	{
+		desc = "Trailblazer: Open marker list",
+		cmd = "<CMD>TrailBlazerToggleTrailMarkList<CR>",
+		keys = { "n", "<leader>ml", silent_noremap },
+	},
+})
+
 telescope.load_extension("command_center")
