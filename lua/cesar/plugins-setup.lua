@@ -219,6 +219,16 @@ return packer.startup(function(use)
 		},
 	})
 
+	-- Mind (note taking)
+	use({
+		"phaazon/mind.nvim",
+		branch = "v2.2",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("mind").setup()
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
