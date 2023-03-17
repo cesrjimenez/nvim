@@ -31,6 +31,7 @@ require("cesar.plugins.git-blame")
 require("cesar.plugins.neotest")
 require("cesar.plugins.trailblazer")
 require("cesar.plugins.chatgpt")
+require("cesar.plugins.mind")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")
