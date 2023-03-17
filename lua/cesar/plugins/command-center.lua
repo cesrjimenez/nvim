@@ -431,6 +431,11 @@ command_center.add({
 		cmd = "<CMD>TypescriptRemoveUnused<CR>",
 		keys = { "n", "<leader>ru", silent_noremap },
 	},
+	{
+		desc = "LSP: [Typescript] Fix all",
+		cmd = "<CMD>TypescriptFixAll<CR>",
+		keys = { "n", "<leader>fa", silent_noremap },
+	},
 })
 
 telescope.load_extension("command_center")

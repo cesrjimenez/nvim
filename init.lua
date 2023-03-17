@@ -27,6 +27,7 @@ require("cesar.plugins.psql")
 require("cesar.plugins.command-center")
 require("cesar.plugins.dressing")
 require("cesar.plugins.hierarchy-tree")
+require("cesar.plugins.git-blame")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")
