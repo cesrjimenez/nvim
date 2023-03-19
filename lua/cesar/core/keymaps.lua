@@ -22,6 +22,11 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
 
+keymap.set("n", "∆", ":m .+1<CR>==") -- move line up(n)
+keymap.set("n", "˚", ":m .-2<CR>==") -- move line down(n)
+keymap.set("v", "∆", ":m '>+1<CR>gv=gv") -- move line up(v)
+keymap.set("v", "˚", ":m '<-2<CR>gv=gv") -- move line down(v)
+
 -- plugin keymaps --
 
 -- vim-maximizer

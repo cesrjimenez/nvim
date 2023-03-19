@@ -324,6 +324,11 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["obsidian.nvim"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
+    url = "https://github.com/epwalsh/obsidian.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -353,6 +358,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/structrue-go.nvim",
     url = "https://github.com/crusj/structrue-go.nvim"
+  },
+  tabular = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/tabular",
+    url = "https://github.com/godlygeek/tabular"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,
@@ -403,6 +413,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
+  ["vim-markdown"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-markdown",
+    url = "https://github.com/preservim/vim-markdown"
   },
   ["vim-maximizer"] = {
     loaded = true,

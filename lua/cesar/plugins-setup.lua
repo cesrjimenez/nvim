@@ -52,6 +52,7 @@ return packer.startup(function(use)
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
+	-- use("beauwilliams/statusline.lua")
 
 	-- telescope & fizzy fiding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
@@ -224,6 +225,18 @@ return packer.startup(function(use)
 		"phaazon/mind.nvim",
 		branch = "v2.2",
 		requires = { "nvim-lua/plenary.nvim" },
+	})
+
+	-- Obsidian
+	use({
+		"epwalsh/obsidian.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"hrsh7th/nvim-cmp",
+			"preservim/vim-markdown",
+			"godlygeek/tabular",
+		},
 	})
 
 	if packer_bootstrap then

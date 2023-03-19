@@ -521,4 +521,19 @@ command_center.add({
 		desc = "Mind Notes: Add notes above - O",
 	},
 })
+
+-- Move Lines
+command_center.add({
+	{
+		desc = "Move Lines: Move line up",
+		cmd = "<CMD>m .+1<CR>==",
+		keys = { "n", "<A-k>", silent_noremap },
+	},
+	{
+		desc = "Move Lines: Move line down",
+		cmd = "<CMD>m .-2<CR>==",
+		keys = { "n", "<A-j>", silent_noremap },
+	},
+})
+
 telescope.load_extension("command_center")
