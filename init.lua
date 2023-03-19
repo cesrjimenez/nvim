@@ -33,6 +33,7 @@ require("cesar.plugins.trailblazer")
 require("cesar.plugins.chatgpt")
 require("cesar.plugins.mind")
 require("cesar.plugins.obsidian")
+require("cesar.plugins.smartcolumn")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")

@@ -344,6 +344,11 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/psql",
     url = "https://github.com/mzarnitsa/psql"
   },
+  ["smartcolumn.nvim"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/smartcolumn.nvim",
+    url = "https://github.com/m4xshen/smartcolumn.nvim"
+  },
   ["sqlite.lua"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/sqlite.lua",

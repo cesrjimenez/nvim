@@ -239,6 +239,9 @@ return packer.startup(function(use)
 		},
 	})
 
+	-- smart column
+	use("m4xshen/smartcolumn.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
