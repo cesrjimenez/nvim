@@ -8,6 +8,8 @@ keymap.set("i", "jk", "<ESC>") -- jk to ESC
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear search with space+nh
 
 keymap.set("n", "x", '"_x') -- when cutting text don't add it to a global registry
+keymap.set("n", "d", '"_d') -- when deleting text don't add it to a global registry
+keymap.set("v", "d", '"_d') -- when deleting text don't add it to a global registry
 
 keymap.set("n", "<leader>+", "<C-a>") -- increment ints
 keymap.set("n", "<leader>-", "<C-x>") -- decrement ints
