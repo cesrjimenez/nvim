@@ -131,7 +131,7 @@ ins_left({
 	color = { fg = colors.yellow, gui = "bold" },
 })
 
-ins_left({
+ins_right({
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
 	symbols = { error = " ", warn = " ", info = " " },
@@ -150,28 +150,28 @@ ins_left({
 -- 	end,
 -- })
 
-ins_right({
-	"diff",
-	-- Is it me or the symbol for modified us really weird
-	-- symbols = { added = " ", modified = "柳", removed = " " },
-	-- symbols = { added = "󰐕 ", modified = "󰝦 ", removed = "󰍴 " },
-	-- symbols = { added = "󰐕 ", modified = "󰺕 ", removed = "󰍴 " },
-	symbols = { added = "󰐕 ", modified = "󰇂 ", removed = "󰍴 " },
-	diff_color = {
-		added = { fg = colors.green },
-		modified = { fg = colors.yellow },
-		removed = { fg = colors.red },
-	},
-	cond = conditions.hide_in_width,
-})
+-- ins_right({
+-- 	"diff",
+-- 	-- Is it me or the symbol for modified us really weird
+-- 	-- symbols = { added = " ", modified = "柳", removed = " " },
+-- 	-- symbols = { added = "󰐕 ", modified = "󰝦 ", removed = "󰍴 " },
+-- 	-- symbols = { added = "󰐕 ", modified = "󰺕 ", removed = "󰍴 " },
+-- 	symbols = { added = "󰐕 ", modified = "󰇂 ", removed = "󰍴 " },
+-- 	diff_color = {
+-- 		added = { fg = colors.green },
+-- 		modified = { fg = colors.yellow },
+-- 		removed = { fg = colors.red },
+-- 	},
+-- 	cond = conditions.hide_in_width,
+-- })
+--
+-- ins_right({
+-- 	"branch",
+-- 	icon = " ",
+-- 	color = { fg = colors.violet, gui = "bold" },
+-- })
 
-ins_right({
-	"branch",
-	icon = " ",
-	color = { fg = colors.violet, gui = "bold" },
-})
-
-ins_right({
+ins_left({
 	-- Lsp server name .
 	function()
 		local msg = "No Active Lsp"
@@ -188,8 +188,8 @@ ins_right({
 		end
 		return msg
 	end,
-	icon = "󱚟  LSP:",
-	-- 	icon = "󰺷  LSP:",
+	-- icon = "󱚟 ",
+	icon = "󰺷 ",
 	color = { fg = "#ffffff", gui = "bold" },
 })
 

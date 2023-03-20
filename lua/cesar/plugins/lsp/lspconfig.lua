@@ -67,14 +67,6 @@ typescript.setup({
 	},
 })
 
--- lspconfig["tsserver"].setup({
--- 	capabilities = capabilities,
--- 	on_attach = on_attach,
--- 	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
--- 	cmd = { "typescript-language-server", "--stdio" },
--- 	root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.base.json", "tsconfig.json", "jsconfig.json"),
--- })
-
 -- configure css server
 lspconfig["cssmodules_ls"].setup({
 	capabilities = capabilities,
@@ -143,7 +135,16 @@ lspconfig["tailwindcss"].setup({
 lspconfig["emmet_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+	filetypes = {
+		"html",
+		"typescriptreact",
+		"javascriptreact",
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"svelte",
+	},
 })
 
 -- configure gopls language server
@@ -185,4 +186,11 @@ lspconfig["lua_ls"].setup({
 			},
 		},
 	},
+})
+
+-- configure yml language server
+lspconfig["yamlls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "yaml", "yml", "conf" },
 })
