@@ -52,10 +52,7 @@ return packer.startup(function(use)
 	use("numToStr/Comment.nvim")
 
 	-- file explorer
-	use("nvim-tree/nvim-tree.lua")
-
-	-- icons
-	use("kyazdani42/nvim-web-devicons")
+	use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -182,7 +179,7 @@ return packer.startup(function(use)
 		"folke/which-key.nvim",
 		config = function()
 			vim.o.timeout = true
-			vim.o.timeoutlen = 850
+			vim.o.timeoutlen = 1850
 			require("which-key").setup({
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
@@ -204,15 +201,7 @@ return packer.startup(function(use)
 	use("kazhala/close-buffers.nvim")
 
 	-- go test
-	use({
-		"nvim-neotest/neotest",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"antoinemadec/FixCursorHold.nvim",
-			"nvim-neotest/neotest-go",
-		},
-	})
+	use({ "vim-test/vim-test" })
 
 	-- Trailblazer
 	use({ "LeonHeidelbach/trailblazer.nvim" })
@@ -248,6 +237,22 @@ return packer.startup(function(use)
 
 	-- smart column
 	use("m4xshen/smartcolumn.nvim")
+
+	-- octo
+	use({
+		"pwntester/octo.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
+		config = function()
+			require("octo").setup()
+		end,
+	})
+
+	-- Diffview
+	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	if packer_bootstrap then
 		require("packer").sync()

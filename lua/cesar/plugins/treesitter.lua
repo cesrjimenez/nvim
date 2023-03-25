@@ -23,6 +23,7 @@ treesitter.setup({
 	indent = {
 		enable = true,
 	},
+	ignore_install = { "sql" },
 	autotag = {
 		enable = true,
 	},
@@ -36,7 +37,6 @@ treesitter.setup({
 		"javascript",
 		"json",
 		"lua",
-		"sql",
 		"markdown",
 		"markdown_inline",
 		"python",

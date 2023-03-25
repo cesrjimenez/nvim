@@ -536,4 +536,46 @@ command_center.add({
 	},
 })
 
+-- Vim Dadbod UI
+command_center.add({
+	{
+		desc = "Vim Dadbod UI: Open database UI",
+		cmd = "<CMD>DBUI<CR>",
+		keys = { "n", "<leader>db", silent_noremap },
+	},
+	{
+		desc = "Vim Dadbod UI: Save query",
+		cmd = "<leader>W",
+		keys = { "n", "<leader>W", silent_noremap },
+	},
+})
+
+-- Go Structrue
+command_center.add({
+	{
+		desc = "Go Structrue: Toggle structure",
+		cmd = "<CMD>lua require'structrue-go'.toggle()<CR>",
+		keys = { "n", "<leader>m", silent_noremap },
+	},
+	{
+		desc = "Go Structrue: Center symbol",
+		cmd = "<CMD>lua require'structrue-go'.center_symbol()<CR>",
+		keys = { "n", "<leader>f", silent_noremap },
+	},
+	{
+		desc = "Go Structrue: Fold toggle",
+		cmd = "<CMD>lua require'structrue-go'.fold_toggle()<CR>",
+		keys = { "n", "<leader>z", silent_noremap },
+	},
+	{
+		desc = "Go Structrue: Preview open",
+		cmd = "<CMD>lua require'structrue-go'.preview_open()<CR>",
+		keys = { "n", "P", silent_noremap },
+	},
+	{
+		desc = "Go Structrue: Preview close",
+		cmd = "<CMD>lua require'structrue-go'.preview_close()<CR>",
+		keys = { "n", "\\p", silent_noremap },
+	},
+})
 telescope.load_extension("command_center")

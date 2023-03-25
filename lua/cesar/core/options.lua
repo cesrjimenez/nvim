@@ -39,4 +39,7 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- scrolloff
+opt.scrolloff = 8
+
 opt.iskeyword:append("-")
