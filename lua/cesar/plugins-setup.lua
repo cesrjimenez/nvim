@@ -254,6 +254,12 @@ return packer.startup(function(use)
 	-- Diffview
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
+	-- Drop (screensaver)
+	use({ "folke/drop.nvim", event = "VimEnter" })
+
+	-- scrollbar
+	use("petertriho/nvim-scrollbar")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
