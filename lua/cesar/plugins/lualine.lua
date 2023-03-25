@@ -6,7 +6,7 @@ end
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#121212',
+  bg       = '#1c1c1c',
   fg       = '#f3ede3',
   yellow   = '#ffd57a',
   cyan     = '#008080',
@@ -119,7 +119,7 @@ ins_left({
 			["!"] = colors.red,
 			t = colors.red,
 		}
-		return { fg = mode_color[vim.fn.mode()] }
+		return { fg = mode_color[vim.fn.mode()], bg = "#1c1c1c" }
 	end,
 	padding = { right = 1 },
 })
