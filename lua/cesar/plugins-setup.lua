@@ -58,7 +58,6 @@ return packer.startup(function(use)
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
-	-- use("beauwilliams/statusline.lua")
 
 	-- telescope & fizzy fiding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
