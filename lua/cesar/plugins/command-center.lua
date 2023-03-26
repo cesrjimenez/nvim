@@ -413,7 +413,7 @@ command_center.add({
 	},
 	{
 		desc = "LSP: See outline on right hand side",
-		cmd = "<CMD>LSoutlineToggle<CR>",
+		cmd = "<CMD>Lspsaga outline<CR>",
 		keys = { "n", "<leader>o", silent_noremap },
 	},
 	{

@@ -8,5 +8,11 @@ if not scroll_hsl_status then
 	return
 end
 
+local scrollbar_git_status, scrollbar_git = pcall(require, "scrollbar.handlers.gitsigns")
+if not scrollbar_git_status then
+	return
+end
+
 scrollbar.setup()
 scroll_hsl.setup()
+scrollbar_git.setup()

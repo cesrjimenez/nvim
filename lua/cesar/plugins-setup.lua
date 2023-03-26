@@ -37,8 +37,9 @@ return packer.startup(function(use)
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	use("bluz71/vim-nightfly-guicolors")
 	use("Mofiqul/vscode.nvim")
+	use({ "catppuccin/nvim", as = "catppuccin" }) -- preferred colorscheme
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
@@ -259,6 +260,7 @@ return packer.startup(function(use)
 	use({ "folke/drop.nvim", event = "VimEnter" })
 
 	-- scrollbar
+	use("kevinhwang91/nvim-hlslens")
 	use("petertriho/nvim-scrollbar")
 
 	if packer_bootstrap then
