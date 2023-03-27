@@ -5,4 +5,10 @@ require("nvim-web-devicons").set_icon({
 		cterm_color = "74",
 		name = "Go",
 	},
+	md = {
+		icon = "",
+		color = "#ffffff",
+		cterm_color = "231",
+		name = "Md",
+	},
 })
