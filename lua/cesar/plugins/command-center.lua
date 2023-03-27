@@ -578,4 +578,14 @@ command_center.add({
 		keys = { "n", "\\p", silent_noremap },
 	},
 })
+
+-- LazyGit
+command_center.add({
+	{
+		desc = "LazyGit: Open lazygit",
+		cmd = "<CMD>LazyGit<CR>",
+		keys = { "n", "<leader>lg", silent_noremap },
+	},
+})
+
 telescope.load_extension("command_center")
