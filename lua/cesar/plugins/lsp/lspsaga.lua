@@ -13,7 +13,6 @@ saga.setup({
 	},
 	ui = {
 		-- This option only works in Neovim 0.9
-		title = true,
 		-- Border type can be single, double, rounded, solid, shadow.
 		border = "single",
 		winblend = 0,
@@ -30,13 +29,11 @@ saga.setup({
 	},
 	symbol_in_winbar = {
 		enable = false,
-		separator = " ",
-		ignore_patterns = {},
-		hide_keyword = true,
-		show_file = true,
-		folder_level = 2,
-		respect_root = true,
-		color_mode = true,
+	},
+	finder = {
+		keys = {
+			tabe = "<CR>",
+		},
 	},
 	outline = {
 		win_position = "right",
