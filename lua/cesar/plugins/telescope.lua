@@ -10,6 +10,9 @@ end
 
 telescope.setup({
 	defaults = {
+		layout_config = {
+			height = 0.75,
+		},
 		mappings = {
 			i = {
 				["<C-k>"] = actions.move_selection_previous,
@@ -38,7 +41,7 @@ telescope.setup({
 vim.api.nvim_set_keymap(
 	"n",
 	"<space>fb",
-	":Telescope file_browser path=%:p:h select_buffer=true<CR>",
+	":Telescope file_browser path=%:p:h select_buffer=true theme=dropdown<CR>",
 	{ noremap = true }
 )
 
