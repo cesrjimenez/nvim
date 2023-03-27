@@ -4,8 +4,11 @@ if not smartcolumn_status then
 end
 
 smartcolumn.setup({
-	colorcolumn = "100",
+	colorcolumn = "200",
 	custom_colorcolumn = {
-		go = "120",
+		go = "200",
+		typescript = "200",
+		javascript = "200",
+		javascriptreact = "200",
 	},
 })
