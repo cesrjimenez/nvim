@@ -18,6 +18,17 @@ telescope.setup({
 			},
 		},
 	},
+	pickers = {
+		current_buffer_fuzzy_find = {
+			theme = "ivy",
+		},
+		buffers = {
+			theme = "dropdown",
+		},
+		file_browser = {
+			theme = "dropdown",
+		},
+	},
 })
 
 -- telescope-file-browser
