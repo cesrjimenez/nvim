@@ -1,6 +1,7 @@
 require("cesar.plugins-setup")
 require("cesar.core.options")
 require("cesar.core.keymaps")
+require("cesar.plugins.nvim-web-devicons")
 require("cesar.core.colorscheme")
 require("cesar.plugins.comment")
 require("cesar.plugins.nvim-tree")
