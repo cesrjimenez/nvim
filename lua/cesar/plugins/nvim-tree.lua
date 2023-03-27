@@ -38,19 +38,56 @@ local WIDTH_RATIO = 0.5 -- You can change this too
 local config = {
 	renderer = {
 		icons = {
+			show = {
+				folder = true,
+			},
+			git_placement = "after",
 			glyphs = {
+				default = "",
+				symlink = "",
+				bookmark = "",
+				modified = "●",
+
 				folder = {
 					arrow_closed = "", -- arrow when folder is closed,
 					arrow_open = "", -- arrow when folder is open
+					default = "",
+					--default = "",
+					open = "",
+					--open = "",
+					--open = "",
+					empty = "",
+					empty_open = "",
+					symlink = "",
+					symlink_open = "",
+				},
+
+				git = {
+					unstaged = "󰊠",
+					--unstaged = "󱜊",
+					--staged = "",
+					staged = "󰮯",
+					unmerged = "",
+					renamed = "➜",
+					--untracked = "",
+					-- untracked = "󱇐",
+					--untracked = "󰯉",
+					--untracked = "󰺵",
+					untracked = "󰸶",
+					deleted = "󰗨",
+					ignored = "◌",
 				},
 			},
 		},
 	},
 	actions = {
-		open_file = {
-			quit_on_open = true,
-			window_picker = {
-				enable = false,
+		file_popup = {
+			open_win_config = {
+				col = 1,
+				row = 1,
+				relative = "cursor",
+				border = "solid",
+				style = "minimal",
 			},
 		},
 	},
@@ -94,6 +131,7 @@ local config = {
 			return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
 		end,
 	},
+	sync_root_with_cwd = true,
 }
 
 vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", { silent = true, noremap = true })

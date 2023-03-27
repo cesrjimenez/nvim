@@ -15,12 +15,16 @@ vim.diagnostic.config({
 
 neotest.setup({
 	-- your neotest config here
+	--	log_level = vim.log.levels.DEBUG,
 	adapters = {
-		require("neotest-go")({
-			experimental = {
-				test_table = true,
-			},
-			args = { "-count=1", "-timeout=60s" },
+		-- require("neotest-go")({
+		-- 	experimental = {
+		-- 		test_table = true,
+		-- 	},
+		-- 	args = { "-count=1", "-timeout=60s" },
+		-- }),
+		require("neotest-vim-test")({
+			ignore_file_types = { "python", "vim", "lua" },
 		}),
 	},
 })
