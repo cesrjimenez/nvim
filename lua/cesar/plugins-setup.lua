@@ -263,6 +263,9 @@ return packer.startup(function(use)
 	use("kevinhwang91/nvim-hlslens")
 	use("petertriho/nvim-scrollbar")
 
+	-- veil
+	use({ "willothy/veil.nvim", event = "VimEnter" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
