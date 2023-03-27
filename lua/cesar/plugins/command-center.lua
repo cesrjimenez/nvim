@@ -136,7 +136,7 @@ command_center.add({
 	{
 		desc = "Telescope: File Browser",
 		cmd = "<leader>fb",
-		keys = { "n", ":Telescope file_browser path=%:p:h", noremap },
+		keys = { "n", "<CMD>Telescope file_browser path=%:p:h<CR>", noremap },
 	},
 })
 
