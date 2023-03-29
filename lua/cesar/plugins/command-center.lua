@@ -417,6 +417,12 @@ command_center.add({
 		keys = { "n", "<leader>o", silent_noremap },
 	},
 	{
+		desc = "LSP: Toggle terminal",
+		cmd = "<CMD>Lspsaga term_toggle",
+		keys = { "n", "<leader>tt", silent_noremap },
+	},
+
+	{
 		desc = "LSP: [Typescript] Rename file",
 		cmd = "<CMD>TypescriptRenameFile<CR>",
 		keys = { "n", "<leader>rf", silent_noremap },
