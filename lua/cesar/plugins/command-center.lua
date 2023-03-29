@@ -418,8 +418,11 @@ command_center.add({
 	},
 	{
 		desc = "LSP: Toggle terminal",
-		cmd = "<CMD>Lspsaga term_toggle",
-		keys = { "n", "<leader>tt", silent_noremap },
+		cmd = "<CMD>Lspsaga term_toggle<CR>",
+		keys = {
+			{ "n", "<leader>tt", silent_noremap },
+			{ "t", "<leader>tt", silent_noremap },
+		},
 	},
 
 	{
