@@ -264,7 +264,18 @@ return packer.startup(function(use)
 	use("petertriho/nvim-scrollbar")
 
 	-- veil
-	use({ "willothy/veil.nvim", event = "VimEnter" })
+	use({
+		"willothy/veil.nvim",
+		event = "VimEnter",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-file-browser.nvim",
+		},
+	})
+
+	-- todo-comments
+	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	if packer_bootstrap then
 		require("packer").sync()
