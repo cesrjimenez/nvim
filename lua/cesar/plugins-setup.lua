@@ -257,7 +257,13 @@ return packer.startup(function(use)
 	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
 
 	-- Drop (screensaver)
-	use({ "folke/drop.nvim", event = "VimEnter" })
+	use({
+		"folke/drop.nvim",
+		event = "VimEnter",
+		config = function()
+			require("drop").setup({ theme = "snow" })
+		end,
+	})
 
 	-- scrollbar
 	use("kevinhwang91/nvim-hlslens")
@@ -276,6 +282,24 @@ return packer.startup(function(use)
 
 	-- todo-comments
 	use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" })
+
+	-- LSP fuzzy
+	use({
+		"ojroques/nvim-lspfuzzy",
+		requires = {
+			{ "junegunn/fzf" },
+			{ "junegunn/fzf.vim" }, -- to enable preview (optional)
+		},
+	})
+
+	-- alpha dashboard
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
