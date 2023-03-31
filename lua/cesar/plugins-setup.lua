@@ -55,6 +55,10 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-web-devicons")
+	use({
+		"yamatsum/nvim-nonicons",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 	use({ "nvim-tree/nvim-tree.lua", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- statusline
@@ -113,6 +117,7 @@ return packer.startup(function(use)
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
 	})
+	use("nvim-treesitter/nvim-treesitter-context")
 
 	-- auto closing
 	use("windwp/nvim-autopairs")
@@ -200,7 +205,7 @@ return packer.startup(function(use)
 	use("f-person/git-blame.nvim")
 
 	-- close buffer
-	use("kazhala/close-buffers.nvim")
+	use("mhinz/vim-sayonara")
 
 	-- go test
 	use({ "vim-test/vim-test" })

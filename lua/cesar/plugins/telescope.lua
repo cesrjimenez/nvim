@@ -8,8 +8,13 @@ if not actions_setup then
 	return
 end
 
+local icons = require("nvim-nonicons")
+
 telescope.setup({
 	defaults = {
+		prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+		selection_caret = " ❯ ",
+		entry_prefix = "   ",
 		layout_config = {
 			height = 0.75,
 		},

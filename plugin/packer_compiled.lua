@@ -105,11 +105,6 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  ["close-buffers.nvim"] = {
-    loaded = true,
-    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/close-buffers.nvim",
-    url = "https://github.com/kazhala/close-buffers.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -328,6 +323,11 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-lspfuzzy",
     url = "https://github.com/ojroques/nvim-lspfuzzy"
   },
+  ["nvim-nonicons"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-nonicons",
+    url = "https://github.com/yamatsum/nvim-nonicons"
+  },
   ["nvim-notify"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-notify",
@@ -347,6 +347,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
   ["nvim-ts-autotag"] = {
     loaded = true,
@@ -486,6 +491,11 @@ _G.packer_plugins = {
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
     url = "https://github.com/bluz71/vim-nightfly-guicolors"
   },
+  ["vim-sayonara"] = {
+    loaded = true,
+    path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-sayonara",
+    url = "https://github.com/mhinz/vim-sayonara"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/cesar/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -515,18 +525,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: octo.nvim
-time([[Config for octo.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
-time([[Config for octo.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1:\a=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
 -- Config for: alpha-nvim
 time([[Config for alpha-nvim]], true)
 try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
 time([[Config for alpha-nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1:\a=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: octo.nvim
+time([[Config for octo.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
+time([[Config for octo.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

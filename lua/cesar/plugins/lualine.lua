@@ -7,7 +7,8 @@ end
 -- stylua: ignore
 local colors = {
   -- bg       = '#1c1c1c',
-  bg       = '#262626',
+  -- bg       = '#262626',
+  bg       = '#1e1e2e',
   fg       = '#f3ede3',
   yellow   = '#ffd57a',
   cyan     = '#008080',
@@ -94,7 +95,7 @@ end
 ins_left({
 	-- mode component
 	function()
-		return " "
+		return "  "
 	end,
 	color = function()
 		-- auto change color according to neovims mode
@@ -121,7 +122,11 @@ ins_left({
 			t = colors.red,
 		}
 		-- return { fg = mode_color[vim.fn.mode()], bg = "#1c1c1c" }
-		return { fg = mode_color[vim.fn.mode()], bg = "#262626" }
+		return {
+			fg = mode_color[vim.fn.mode()],
+			-- bg = "#262626"
+			bg = "#1e1e2e",
+		}
 	end,
 	padding = { right = 1 },
 })

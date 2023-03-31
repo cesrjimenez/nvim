@@ -6,10 +6,10 @@ end
 
 catppuccin.setup({
 	background = {
-		dark = "macchiato",
+		dark = "mocha",
 	},
 	custom_highlights = {
-		NvimTreeNormal = { bg = "#262626" },
+		NvimTreeNormal = { bg = "#1e1e2e" },
 		NvimTreeStatuslineNc = { fg = "#ffff2e" },
 	},
 	term_colors = true,
