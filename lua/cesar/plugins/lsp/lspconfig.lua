@@ -192,5 +192,5 @@ lspconfig["lua_ls"].setup({
 lspconfig["yamlls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	filetypes = { "yaml", "yml", "conf" },
+	filetypes = { "yaml", "yml" },
 })
