@@ -53,4 +53,4 @@ keymap.set("n", "<leader>=q", "<cmd>TroubleToggle quickfix<cr>", { silent = true
 keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
 
 -- buffer close
-keymap.set("n", "<leader>q", ":BDelete this<CR>")
+keymap.set("n", "<leader>q", "<CMD>Sayonara<CR>")
