@@ -66,7 +66,13 @@ return packer.startup(function(use)
 
 	-- telescope & fizzy fiding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
-	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = {
+			{ "nvim-telescope/telescope-live-grep-args.nvim" },
+		},
+		branch = "0.1.x",
+	})
 	use({
 		"nvim-telescope/telescope-file-browser.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },

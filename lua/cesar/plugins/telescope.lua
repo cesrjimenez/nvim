@@ -8,6 +8,11 @@ if not actions_setup then
 	return
 end
 
+local live_grep_args_status, lga_actions = pcall(require, "telescope-live-grep-args.actions")
+if not live_grep_args_status then
+	return
+end
+
 local icons = require("nvim-nonicons")
 
 telescope.setup({
@@ -35,6 +40,22 @@ telescope.setup({
 		},
 		file_browser = {
 			theme = "dropdown",
+		},
+	},
+	extensions = {
+		live_grep_args = {
+			auto_quoting = true, -- enable/disable auto-quoting
+			-- define mappings, e.g.
+			mappings = { -- extend mappings
+				i = {
+					["<C-f>"] = lga_actions.quote_prompt(),
+					["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+				},
+			},
+			-- ... also accepts theme settings, for example:
+			-- theme = "dropdown", -- use dropdown theme
+			-- theme = { }, -- use own theme spec
+			-- layout_config = { mirror=true }, -- mirror preview pane
 		},
 	},
 })

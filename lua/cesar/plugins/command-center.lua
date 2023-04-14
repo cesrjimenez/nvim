@@ -110,7 +110,7 @@ command_center.add({
 	},
 	{
 		desc = "Telescope: Find string",
-		cmd = "<leader>fs",
+		cmd = "<leader>fss",
 		keys = { "n", "<CMD>Telescope live_grep<CR>", noremap },
 	},
 	{
