@@ -64,7 +64,7 @@ return packer.startup(function(use)
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
-	-- telescope & fizzy fiding
+	-- telescope & fuzzy fiding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -78,6 +78,14 @@ return packer.startup(function(use)
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
+	use({
+		"jvgrootveld/telescope-zoxide",
+		requires = {
+			{ "nvim-lua/popup.nvim" },
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-telescope/telescope.nvim" },
+		},
+	})
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -272,7 +280,7 @@ return packer.startup(function(use)
 		"folke/drop.nvim",
 		event = "VimEnter",
 		config = function()
-			require("drop").setup({ theme = "snow" })
+			require("drop").setup({ theme = "leaves", max = 10, interval = 150 })
 		end,
 	})
 
