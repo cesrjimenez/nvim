@@ -222,9 +222,14 @@ command_center.add({
 -- Harpoon
 command_center.add({
 	{
-		desc = "Harpoon: Toggle harpoon",
-		cmd = "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>",
+		desc = "Harpoon: Toggle harpoon (telescope)",
+		cmd = ":Telescope harpoon marks<CR>",
 		keys = { "n", "<Leader>h", silent_noremap },
+	},
+	{
+		desc = "Harpoon: Toggle harpoon quick menu",
+		cmd = "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>",
+		keys = { "n", "<Leader>hq", silent_noremap },
 	},
 	{
 		desc = "Harpoon: Add file to harpoon",
@@ -502,32 +507,6 @@ command_center.add({
 		desc = "Trailblazer: Open marker list",
 		cmd = "<CMD>TrailBlazerToggleTrailMarkList<CR>",
 		keys = { "n", "<leader>ml", silent_noremap },
-	},
-})
-
--- Mind Notes
-command_center.add({
-	{
-		desc = "Mind Notes: Open mind notes [Global]",
-		cmd = "<CMD>MindOpenMain<CR>",
-		keys = { "n", "<leader>M", silent_noremap },
-	},
-	{
-		desc = "Mind Notes: Open mind notes [Project]",
-		cmd = "<CMD>MindOpenProject<CR>",
-		keys = { "n", "<leader>Mp", silent_noremap },
-	},
-	{
-		desc = "Mind Notes: Add notes inside start - I",
-	},
-	{
-		desc = "Mind Notes: Add notes inside end - i",
-	},
-	{
-		desc = "Mind Notes: Add notes below - o",
-	},
-	{
-		desc = "Mind Notes: Add notes above - O",
 	},
 })
 

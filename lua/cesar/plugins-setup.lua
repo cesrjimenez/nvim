@@ -237,13 +237,6 @@ return packer.startup(function(use)
 		},
 	})
 
-	-- Mind (note taking)
-	use({
-		"phaazon/mind.nvim",
-		branch = "v2.2",
-		requires = { "nvim-lua/plenary.nvim" },
-	})
-
 	-- Obsidian
 	use({
 		"epwalsh/obsidian.nvim",
@@ -317,6 +310,14 @@ return packer.startup(function(use)
 		requires = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
+
+	-- better escape
+	use({
+		"max397574/better-escape.nvim",
+		config = function()
+			require("better_escape").setup()
 		end,
 	})
 
