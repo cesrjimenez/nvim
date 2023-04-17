@@ -78,14 +78,6 @@ return packer.startup(function(use)
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
 	})
 	use({ "nvim-telescope/telescope-ui-select.nvim" })
-	use({
-		"jvgrootveld/telescope-zoxide",
-		requires = {
-			{ "nvim-lua/popup.nvim" },
-			{ "nvim-lua/plenary.nvim" },
-			{ "nvim-telescope/telescope.nvim" },
-		},
-	})
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -320,6 +312,9 @@ return packer.startup(function(use)
 			require("better_escape").setup()
 		end,
 	})
+
+	-- zero (improved 0 & ^)
+	use("yuki-yano/zero.nvim")
 
 	if packer_bootstrap then
 		require("packer").sync()

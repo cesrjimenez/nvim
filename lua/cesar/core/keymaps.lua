@@ -45,7 +45,6 @@ keymap.set("n", "<leader>fs", "<cmd>lua require('telescope').extensions.live_gre
 keymap.set("n", "<leader>fg", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fk", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope current_buffer_fuzzy_find<cr>") -- list available help tags
-keymap.set("n", "<leader>cd", "<cmd>Telescope zoxide list<cr>") -- list zoxide directory history
 
 -- trouble
 keymap.set("n", "<leader>=", "<cmd>troubletoggle<cr>", { silent = true, noremap = true })
