@@ -476,37 +476,23 @@ command_center.add({
 	},
 })
 
--- Trailblazer
+-- Marks
 command_center.add({
 	{
-		desc = "Trailblazer: Add marker  ",
-		cmd = "<CMD>TrailBlazerNewTrailMark<CR>",
-		keys = { "n", "<leader>ma", silent_noremap },
+		desc = "Marks: Add marker",
+		keys = { "n", "mx", silent_noremap },
 	},
 	{
-		desc = "Trailblazer: Trackback go to Basecamp  (consume)",
-		cmd = "<CMD>TrailBlazerTrackBack<CR>",
-		keys = { "n", "<leader>mb", silent_noremap },
+		desc = "Marks: Set the next available alphabetical (lowercase) mark",
+		keys = { "n", "m,", silent_noremap },
 	},
 	{
-		desc = "Trailblazer: Track back marker (peek)  ",
-		cmd = "<CMD>TrailBlazerPeekMovePreviousUp<CR>",
-		keys = { "n", "<leader>mM", silent_noremap },
+		desc = "Marks: Toggle the next available mark at the current line",
+		keys = { "n", "m;", silent_noremap },
 	},
 	{
-		desc = "Trailblazer: Track forward marker (peek)  ",
-		cmd = "<CMD>TrailBlazerPeekMoveNextDown<CR>",
-		keys = { "n", "<leader>mm", silent_noremap },
-	},
-	{
-		desc = "Trailblazer: Jump to closest marker",
-		cmd = "<CMD>TrailBlazerMoveToNearest<CR>",
-		keys = { "n", "<leader>mc", silent_noremap },
-	},
-	{
-		desc = "Trailblazer: Open marker list",
-		cmd = "<CMD>TrailBlazerToggleTrailMarkList<CR>",
-		keys = { "n", "<leader>ml", silent_noremap },
+		desc = "Marks: Delete mark x",
+		keys = { "n", "dmx", silent_noremap },
 	},
 })
 

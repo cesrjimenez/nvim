@@ -216,6 +216,9 @@ return packer.startup(function(use)
 	-- go test
 	use({ "vim-test/vim-test" })
 
+	-- marks
+	use("chentoast/marks.nvim")
+
 	-- Chat GPT3
 	use({
 		"jackMort/ChatGPT.nvim",

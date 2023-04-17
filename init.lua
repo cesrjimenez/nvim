@@ -37,6 +37,7 @@ require("cesar.plugins.scrollbar")
 require("cesar.plugins.nvim-lspfuzzy")
 require("cesar.plugins.nvim-notify")
 require("cesar.plugins.zero")
+require("cesar.plugins.marks")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")
