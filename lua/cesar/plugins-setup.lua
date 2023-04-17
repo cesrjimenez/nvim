@@ -216,9 +216,6 @@ return packer.startup(function(use)
 	-- go test
 	use({ "vim-test/vim-test" })
 
-	-- Trailblazer
-	use({ "LeonHeidelbach/trailblazer.nvim" })
-
 	-- Chat GPT3
 	use({
 		"jackMort/ChatGPT.nvim",
