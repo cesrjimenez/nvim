@@ -316,6 +316,12 @@ return packer.startup(function(use)
 	-- zero (improved 0 & ^)
 	use("yuki-yano/zero.nvim")
 
+	-- yanks
+	use("gbprod/cutlass.nvim")
+
+	-- vim-kitty
+	use("fladson/vim-kitty")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

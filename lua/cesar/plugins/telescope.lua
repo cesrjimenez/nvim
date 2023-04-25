@@ -50,6 +50,7 @@ telescope.setup({
 				i = {
 					["<C-f>"] = lga_actions.quote_prompt(),
 					["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
+					["<C-t>"] = lga_actions.quote_prompt({ postfix = " --iglob !**/test/** --glob !**/*test*/** " }),
 				},
 			},
 			-- ... also accepts theme settings, for example:

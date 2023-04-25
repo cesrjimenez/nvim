@@ -33,6 +33,7 @@ saga.setup({
 	finder = {
 		keys = {
 			tabe = "<CR>",
+			vsplit = "v",
 		},
 	},
 	outline = {
