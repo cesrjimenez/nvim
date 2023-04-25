@@ -479,20 +479,24 @@ command_center.add({
 -- Marks
 command_center.add({
 	{
+		cmd = "",
 		desc = "Marks: Add marker",
 		keys = { "n", "mx", silent_noremap },
 	},
 	{
+		cmd = "",
 		desc = "Marks: Set the next available alphabetical (lowercase) mark",
 		keys = { "n", "m,", silent_noremap },
 	},
 	{
-		desc = "Marks: Toggle the next available mark at the current line",
-		keys = { "n", "m;", silent_noremap },
+		cmd = "",
+		desc = "Marks: Toggle the next available mark",
+		keys = { "n", "m;" },
 	},
 	{
+		cmd = "",
 		desc = "Marks: Delete mark x",
-		keys = { "n", "dmx", silent_noremap },
+		keys = { "n", "dmx", noremap },
 	},
 })
 
