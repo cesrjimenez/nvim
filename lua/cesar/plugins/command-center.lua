@@ -358,7 +358,7 @@ command_center.add({
 command_center.add({
 	{
 		desc = "LSP: Show definition & references",
-		cmd = "<CMD>Lspsaga lsp_finder<CR>",
+		cmd = "<CMD>Lspsaga finder<CR>",
 		keys = { "n", "gr", silent_noremap },
 	},
 	{

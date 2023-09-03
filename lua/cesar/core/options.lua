@@ -4,7 +4,7 @@ local opt = vim.opt -- for conciseness
 opt.hidden = true
 
 -- line numbers
-opt.relativenumber = true
+opt.relativenumber = false
 opt.number = true
 
 -- tabs & indentation

@@ -41,6 +41,7 @@ treesitter.setup({
 		"markdown_inline",
 		"python",
 		"regex",
+		"rust",
 		"tsx",
 		"typescript",
 		"vim",

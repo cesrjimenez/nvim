@@ -13,11 +13,11 @@ if not live_grep_args_status then
 	return
 end
 
-local icons = require("nvim-nonicons")
-
+-- local icons = require("nvim-nonicons")
 telescope.setup({
 	defaults = {
-		prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+		-- prompt_prefix = "  " .. icons.get("telescope") .. "  ",
+		prompt_prefix = " " .. "󰟴 " .. " ",
 		selection_caret = " ❯ ",
 		entry_prefix = "   ",
 		layout_config = {

@@ -9,6 +9,9 @@ saga.setup({
 	scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
 	-- use enter to open file with definition preview
 	definition = {
+		keys = {
+			edit = "<CR>",
+		},
 		edit = "<CR>",
 	},
 	ui = {
@@ -33,7 +36,7 @@ saga.setup({
 	finder = {
 		keys = {
 			tabe = "<CR>",
-			vsplit = "v",
+			vsplit = "|",
 		},
 	},
 	outline = {

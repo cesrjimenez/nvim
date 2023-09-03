@@ -13,6 +13,11 @@ if not typescript_setup then
 	return
 end
 
+local rust_tools_status, rust_tools = pcall(require, "rust-tools")
+if not rust_tools_status then
+	return
+end
+
 local keymap = vim.keymap
 
 -- enable keybinds for available lsp server
@@ -21,10 +26,10 @@ local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
 	-- set keybinds
-	keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+	keymap.set("n", "gr", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
-	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+	keymap.set("n", "gi", "<cmd>Lspsaga finder imp<CR>", opts) -- go to implementation
 	keymap.set("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opts) -- show hover
 	keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename
@@ -61,6 +66,14 @@ lspconfig["html"].setup({
 
 -- configure typescript server
 typescript.setup({
+	server = {
+		capabilities = capabilities,
+		on_attach = on_attach,
+	},
+})
+
+-- configure rust server
+rust_tools.setup({
 	server = {
 		capabilities = capabilities,
 		on_attach = on_attach,
@@ -109,21 +122,21 @@ lspconfig["sqlls"].setup({
 	on_attach = on_attach,
 })
 
-lspconfig.sqls.setup({
-	on_attach = function(client, bufnr)
-		require("sqls").on_attach(client, bufnr)
-	end,
-	settings = {
-		sqls = {
-			connections = {
-				{
-					driver = "postgresql",
-					dataSourceName = "postgres://sourcegraph@localhost:5432/sourcegraph?sslmode=disable",
-				},
-			},
-		},
-	},
-})
+-- lspconfig.sqls.setup({
+-- 	on_attach = function(client, bufnr)
+-- 		require("sqls").on_attach(client, bufnr)
+-- 	end,
+-- 	settings = {
+-- 		sqls = {
+-- 			connections = {
+-- 				{
+-- 					driver = "postgresql",
+-- 					dataSourceName = "postgres://sourcegraph@localhost:5432/sourcegraph?sslmode=disable",
+-- 				},
+-- 			},
+-- 		},
+-- 	},
+-- })
 
 -- configure tailwindcss server
 lspconfig["tailwindcss"].setup({

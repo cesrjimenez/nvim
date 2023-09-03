@@ -8,6 +8,7 @@ catppuccin.setup({
 	background = {
 		dark = "mocha",
 	},
+	no_bold = true, -- Force no bold
 	custom_highlights = {
 		NvimTreeNormal = { bg = "#1e1e2e" },
 		NvimTreeStatuslineNc = { fg = "#ffff2e" },
