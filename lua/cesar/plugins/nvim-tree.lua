@@ -111,6 +111,9 @@ end
 
 local config = {
 	on_attach = on_attach,
+	git = {
+		enable = false,
+	},
 	renderer = {
 		icons = {
 			show = {
