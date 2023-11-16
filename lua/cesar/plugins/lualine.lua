@@ -195,8 +195,11 @@ ins_left({
 		end
 		return msg
 	end,
-	-- icon = "󱚟 ",
-	icon = "󰺷 ",
+	-- icon = "󱚟 ",
+	--icon = " ",
+	icon = " ",
+	-- icon = " ",
+	-- icon = "󰺷 ",
 	color = { fg = "#ffffff", gui = "bold" },
 })
 

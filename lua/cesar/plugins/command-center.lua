@@ -3,7 +3,7 @@ if not telescope_setup then
 	return
 end
 
-local command_center_status, command_center = pcall(require, "command_center")
+local command_center_status, command_center = pcall(require, "command")
 if not command_center_status then
 	return
 end

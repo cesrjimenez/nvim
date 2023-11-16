@@ -8,13 +8,13 @@ if not parser_status then
 	return
 end
 
-treesitter_parser.get_parser_configs().markdown = {
-	install_info = {
-		url = "https://github.com/MDeiml/tree-sitter-markdown",
-		files = { "src/parser.c", "src/scanner.cc" },
-	},
-	filetype = "markdown",
-}
+-- treesitter_parser.get_parser_configs().markdown = {
+-- 	install_info = {
+-- 		url = "https://github.com/MDeiml/tree-sitter-markdown",
+-- 		files = { "src/parser.c", "src/scanner.cc" },
+-- 	},
+-- 	filetype = "markdown",
+-- }
 
 treesitter.setup({
 	highlight = {

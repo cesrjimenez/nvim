@@ -326,13 +326,6 @@ return packer.startup({
 		-- rust
 		use("simrat39/rust-tools.nvim")
 
-		-- cody sourcegraph
-		use({
-			"sourcegraph/sg.nvim",
-			dependencies = { "nvim-lua/plenary.nvim" },
-			run = "nvim -l build/init.lua",
-		})
-
 		if packer_bootstrap then
 			require("packer").sync()
 		end
