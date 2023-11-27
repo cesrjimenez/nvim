@@ -3,16 +3,26 @@ if not telescope_setup then
 	return
 end
 
-local command_center_status, command_center = pcall(require, "command")
-if not command_center_status then
-	return
-end
+-- local command_center_status, commander = pcall(require, "commander.nvim")
+-- if not command_center_status then
+-- 	return
+-- end
+local commander = require("commander")
 
 local noremap = { noremap = true }
 local silent_noremap = { noremap = true, silent = true }
 
+commander.setup({
+	integration = {
+		telescope = {
+			enable = true,
+			theme = require("telescope.themes").commander,
+		},
+	},
+})
+
 -- general keymaps
-command_center.add({
+commander.add({
 	{
 		desc = "Core: Escape insert mode",
 		cmd = "<ESC>",
@@ -20,113 +30,113 @@ command_center.add({
 	},
 	{
 		desc = "Core: Clear search",
-		cmd = "<leader>nh",
-		keys = { "n", ":nohl<CR>", noremap },
+		cmd = ":nohl<CR>",
+		keys = { "n", "<leader>nh", noremap },
 	},
 	{
 		desc = "Core: Increment ints",
-		cmd = "<leader>+",
-		keys = { "n", "<C-a>", noremap },
+		cmd = "<C-a>",
+		keys = { "n", "<leader>+", noremap },
 	},
 	{
 		desc = "Core: Decrement ints",
-		cmd = "<leader>-",
-		keys = { "n", "<C-x>", noremap },
+		cmd = "<C-x>",
+		keys = { "n", "<leader>-", noremap },
 	},
 	{
 		desc = "Core: Find and replace",
 		cmd = ":%s@",
 	},
-})
+}, { show = true })
 
 -- Window Mappings
-command_center.add({
+commander.add({
 	{
 		desc = "Window: Split horizontal",
-		cmd = "<leader>sh",
-		keys = { "n", "<C-w>s", noremap },
+		cmd = "<C-w>s",
+		keys = { "n", "<leader>sh", noremap },
 	},
 	{
 		desc = "Window: Split vertical",
-		cmd = "<leader>sv",
-		keys = { "n", "<C-w>v", noremap },
+		cmd = "<C-w>v",
+		keys = { "n", "<leader>sv", noremap },
 	},
 	{
 		desc = "Window: Split equal width",
-		cmd = "<leader>se",
-		keys = { "n", "<C-w>=", noremap },
+		cmd = "<C-w>=",
+		keys = { "n", "<leader>se", noremap },
 	},
 	{
 		desc = "Window: Close current split window",
-		cmd = "<leader>sx",
-		keys = { "n", ":close<CR>", noremap },
+		cmd = ":close<CR>",
+		keys = { "n", "<leader>sx", noremap },
 	},
 	{
 		desc = "Window: Maximize current window",
-		cmd = "<leader>sm",
-		keys = { "n", ":MaximizerToggle<CR>", noremap },
+		cmd = ":MaximizerToggle<CR>",
+		keys = { "n", "<leader>sm", noremap },
 	},
 })
 
 -- Tabs and Buffers
-command_center.add({
+commander.add({
 	{
 		desc = "Tab: Open new tab",
-		cmd = "<leader>to",
-		keys = { "n", ":tabnew<CR>", noremap },
+		cmd = ":tabnew<CR>",
+		keys = { "n", "<leader>to", noremap },
 	},
 	{
 		desc = "Tab: Close current tab",
-		cmd = "<leader>tx",
-		keys = { "n", ":tabclose<CR>", noremap },
+		cmd = ":tabclose<CR>",
+		keys = { "n", "<leader>tx", noremap },
 	},
 	{
 		desc = "Tab: Next tab",
-		cmd = "<leader>tn",
-		keys = { "n", ":tabn<CR>", noremap },
+		cmd = ":tabn<CR>",
+		keys = { "n", "<leader>tn", noremap },
 	},
 	{
 		desc = "Tab: Previous tab",
-		cmd = "<leader>tp",
-		keys = { "n", ":tabp<CR>", noremap },
+		cmd = ":tabp<CR>",
+		keys = { "n", "<leader>tp", noremap },
 	},
 })
 
 -- Navigation
-command_center.add({
+commander.add({
 	{
 		desc = "Directory: Open directory at current file",
-		cmd = "<leader>k",
-		keys = { "n", ":NvimTreeToggle<CR>", noremap },
+		cmd = ":NvimTreeToggle<CR>",
+		keys = { "n", "<leader>k", noremap },
 	},
 })
 
 -- Telescope
-command_center.add({
+commander.add({
 	{
 		desc = "Telescope: Find files",
-		cmd = "<leader>ff",
-		keys = { "n", "<CMD>Telescope find_files<CR>", noremap },
+		cmd = "<CMD>Telescope find_files<CR>",
+		keys = { "n", "<leader>ff", noremap },
 	},
 	{
 		desc = "Telescope: Find string",
-		cmd = "<leader>fss",
-		keys = { "n", "<CMD>Telescope live_grep<CR>", noremap },
+		cmd = "<CMD>Telescope live_grep<CR>",
+		keys = { "n", "<leader>fss", noremap },
 	},
 	{
 		desc = "Telescope: Find string under cursor",
-		cmd = "<leader>fg",
-		keys = { "n", "<CMD>Telescope grep_string<CR>", noremap },
+		cmd = "<CMD>Telescope grep_string<CR>",
+		keys = { "n", "<leader>fg", noremap },
 	},
 	{
 		desc = "Telescope: Find buffers",
-		cmd = "<leader>fk",
-		keys = { "n", "<CMD>Telescope buffers<CR>", noremap },
+		cmd = "<CMD>Telescope buffers<CR>",
+		keys = { "n", "<leader>fk", noremap },
 	},
 	{
 		desc = "Telescope: Fuzzy find current buffer",
-		cmd = "<leader>fh",
-		keys = { "n", "<CMD>Telescope current_buffer_fuzzy_find<CR>", noremap },
+		cmd = "<CMD>Telescope current_buffer_fuzzy_find<CR>",
+		keys = { "n", "<leader>fh", noremap },
 	},
 	{
 		-- If no keys are specified, no keymaps will be displayed nor set
@@ -135,17 +145,19 @@ command_center.add({
 	},
 	{
 		desc = "Telescope: File Browser",
-		cmd = "<leader>fb",
-		keys = { "n", "<CMD>Telescope file_browser path=%:p:h<CR>", noremap },
+		cmd = "<CMD>Telescope file_browser path=%:p:h<CR>",
+		keys = { "n", "<leader>fb", noremap },
 	},
 })
 
 -- Command Center w/ Telescope
-command_center.add({
+commander.add({
 	{
 		desc = "Telescope: Open command_center",
-		cmd = "<CMD>Telescope command_center<CR>",
+		-- cmd = "<CMD>Telescope commander<CR>",
+		cmd = "<CMD>lua require('commander').show()<CR>",
 		keys = {
+			--	{ "<leader>f", "<CMD>Telescope commander<CR>", mode = "n" },
 			{ "n", "<Leader>fc", noremap },
 			{ "v", "<Leader>fc", noremap },
 			-- If ever hesitate when using telescope start with <leader>f,
@@ -154,10 +166,10 @@ command_center.add({
 			{ "v", "<Leader>f", noremap },
 		},
 	},
-}, command_center.mode.REGISTER_ONLY)
+})
 
 -- Trouble
-command_center.add({
+commander.add({
 	{
 		desc = "Trouble: Open trouble window",
 		cmd = "<CMD>TroubleToggle<CR>",
@@ -191,7 +203,7 @@ command_center.add({
 })
 
 -- DAP Debugging
-command_center.add({
+commander.add({
 	{
 		desc = "Debug: Start debugging",
 		cmd = "<CMD>lua require('dap').continue()<CR>",
@@ -220,7 +232,7 @@ command_center.add({
 })
 
 -- Harpoon
-command_center.add({
+commander.add({
 	{
 		desc = "Harpoon: Toggle harpoon (telescope)",
 		cmd = ":Telescope harpoon marks<CR>",
@@ -259,7 +271,7 @@ command_center.add({
 })
 
 -- Cokeline
-command_center.add({
+commander.add({
 	{
 		desc = "Cokeline: Focus Previous",
 		cmd = "<Plug>(cokeline-focus-prev)",
@@ -283,7 +295,7 @@ command_center.add({
 })
 
 -- Nvim Tree
-command_center.add({
+commander.add({
 	{
 		desc = "Nvim Tree: Toggle Nvim Tree",
 		cmd = "<CMD>NvimTreeToggle<CR>",
@@ -292,46 +304,46 @@ command_center.add({
 })
 
 -- Hierarchy Tree Go
-command_center.add({
+commander.add({
 	{
 		desc = "Hierarchy Tree: Call incoming",
-		cmd = "<leader>fi",
-		keys = { "n", ":lua require'hierarchy-tree-go'.incoming()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.incoming()",
+		keys = { "n", "<leader>fi", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Call outgoing",
-		cmd = "<leader>fo",
-		keys = { "n", ":lua require'hierarchy-tree-go'.outgoing()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.outgoing()",
+		keys = { "n", "<leader>fo", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Open hierarchy tree",
-		cmd = "<leader>ho",
-		keys = { "n", ":lua require'hierarchy-tree-go'.open()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.open()",
+		keys = { "n", "<leader>ho", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Close hierarchy tree",
-		cmd = "<leader>hc",
-		keys = { "n", ":lua require'hierarchy-tree-go'.close()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.close()",
+		keys = { "n", "<leader>hc", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Focus hierarchy tree",
-		cmd = "<leader>fu",
-		keys = { "n", ":lua require'hierarchy-tree-go'.focus()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.focus()",
+		keys = { "n", "<leader>fu", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Expand hierarchy tree",
-		cmd = "o",
-		keys = { "n", ":lua require'hierarchy-tree-go'.expand()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.expand()",
+		keys = { "n", "o", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Jump to selection",
-		cmd = "<CR>",
-		keys = { "n", ":lua require'hierarchy-tree-go'.jump()", silent_noremap },
+		cmd = ":lua require'hierarchy-tree-go'.jump()",
+		keys = { "n", "<CR>", silent_noremap },
 	},
 })
 
 -- Git Blame
-command_center.add({
+commander.add({
 	{
 		desc = "Git Blame: Toggle git blame",
 		cmd = ":GitBlameToggle<CR>",
@@ -355,7 +367,7 @@ command_center.add({
 })
 
 -- LSP
-command_center.add({
+commander.add({
 	{
 		desc = "LSP: Show definition & references",
 		cmd = "<CMD>Lspsaga finder<CR>",
@@ -425,11 +437,10 @@ command_center.add({
 		desc = "LSP: Toggle terminal",
 		cmd = "<CMD>Lspsaga term_toggle<CR>",
 		keys = {
-			{ "n", "<leader>tt", silent_noremap },
-			{ "t", "<leader>tt", silent_noremap },
+			{ "n", "<leader>tt" },
+			{ "t", "<leader>tt" },
 		},
 	},
-
 	{
 		desc = "LSP: [Typescript] Rename file",
 		cmd = "<CMD>TypescriptRenameFile<CR>",
@@ -453,7 +464,7 @@ command_center.add({
 })
 
 -- NeoTest
-command_center.add({
+commander.add({
 	{
 		desc = "NeoTest: Run nearest test",
 		cmd = "<CMD>lua require('neotest').run.run()<CR>",
@@ -477,7 +488,7 @@ command_center.add({
 })
 
 -- Marks
-command_center.add({
+commander.add({
 	{
 		cmd = "",
 		desc = "Marks: Add marker",
@@ -501,7 +512,7 @@ command_center.add({
 })
 
 -- Move Lines
-command_center.add({
+commander.add({
 	{
 		desc = "Move Lines: Move line up",
 		cmd = "<CMD>m .+1<CR>==",
@@ -515,7 +526,7 @@ command_center.add({
 })
 
 -- Vim Dadbod UI
-command_center.add({
+commander.add({
 	{
 		desc = "Vim Dadbod UI: Open database UI",
 		cmd = "<CMD>DBUI<CR>",
@@ -529,7 +540,7 @@ command_center.add({
 })
 
 -- Go Structrue
-command_center.add({
+commander.add({
 	{
 		desc = "Go Structrue: Toggle structure",
 		cmd = "<CMD>lua require'structrue-go'.toggle()<CR>",
@@ -558,7 +569,7 @@ command_center.add({
 })
 
 -- LazyGit
-command_center.add({
+commander.add({
 	{
 		desc = "LazyGit: Open lazygit",
 		cmd = "<CMD>LazyGit<CR>",
@@ -566,4 +577,11 @@ command_center.add({
 	},
 })
 
-telescope.load_extension("command_center")
+commander.add({
+	{
+		desc = "Project: Open project",
+		cmd = "<CMD>Telescope projects<CR>",
+	},
+})
+
+-- telescope.load_extension("commander")

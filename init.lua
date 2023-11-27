@@ -39,6 +39,7 @@ require("cesar.plugins.nvim-notify")
 require("cesar.plugins.zero")
 require("cesar.plugins.marks")
 require("cesar.plugins.cutlass")
+require("cesar.plugins.project")
 
 -- dap
 require("cesar.plugins.dap.dap-ui")

@@ -180,7 +180,7 @@ return packer.startup({
 		use("mzarnitsa/psql")
 
 		-- command center
-		use({ "FeiyouG/command_center.nvim", requires = { "nvim-telescope/telescope.nvim" } })
+		use({ "FeiyouG/commander.nvim", requires = { "nvim-telescope/telescope.nvim" } })
 
 		-- dressing
 		use({ "stevearc/dressing.nvim" })
@@ -325,6 +325,9 @@ return packer.startup({
 
 		-- rust
 		use("simrat39/rust-tools.nvim")
+
+		-- project
+		use("ahmedkhalf/project.nvim")
 
 		if packer_bootstrap then
 			require("packer").sync()
