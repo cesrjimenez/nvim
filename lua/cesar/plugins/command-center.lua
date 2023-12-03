@@ -1,8 +1,3 @@
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
-	return
-end
-
 -- local command_center_status, commander = pcall(require, "commander.nvim")
 -- if not command_center_status then
 -- 	return
@@ -333,7 +328,7 @@ commander.add({
 	{
 		desc = "Hierarchy Tree: Expand hierarchy tree",
 		cmd = ":lua require'hierarchy-tree-go'.expand()",
-		keys = { "n", "o", silent_noremap },
+		keys = { "n", "<leader>he", silent_noremap },
 	},
 	{
 		desc = "Hierarchy Tree: Jump to selection",

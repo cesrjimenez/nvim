@@ -31,6 +31,9 @@ keymap.set("n", "˚", ":m .-2<CR>==") -- move line down(n)
 keymap.set("v", "∆", ":m '>+1<CR>gv=gv") -- move line up(v)
 keymap.set("v", "˚", ":m '<-2<CR>gv=gv") -- move line down(v)
 
+keymap.set("n", "<C-k>", "{", { silent = true, noremap = true }) -- move line up(n)
+keymap.set("n", "<C-j>", "}", { silent = true, noremap = true }) -- move line down(n)
+
 -- plugin keymaps --
 
 -- vim-maximizer
@@ -56,3 +59,13 @@ keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, 
 
 -- buffer close
 keymap.set("n", "<leader>q", "<CMD>Sayonara<CR>")
+
+-- vim-tmux-navigator
+vim.g.tmux_navigator_no_mappings = 1
+
+-- Map Ctrl + arrow keys for tmux navigation
+keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-Down>", ":TmuxNavigateDown<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-Up>", ":TmuxNavigateUp<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { silent = true, noremap = true })
+keymap.set("n", "<C-p>", ":TmuxNavigatePrevious<CR>", { silent = true, noremap = true })
